@@ -1,15 +1,15 @@
 :root {
-  --ink: #2b2320;
-  --muted: #7a6f68;
-  --paper: #fffaf3;
+  --ink: #14142b;
+  --muted: #63637d;
+  --paper: #f7f8fc;
   --white: #ffffff;
-  --line: #f0e4d6;
-  --green: #ef6f53;
-  --green-dark: #b8492f;
-  --lime: #ffd77a;
-  --coral: #4fb08a;
-  --yellow: #ffcf5c;
-  --shadow: 0 18px 50px rgba(120, 60, 40, 0.14);
+  --line: #e3e5f5;
+  --green: #5b3bff;
+  --green-dark: #3f22cc;
+  --lime: #ffe14d;
+  --coral: #ff3d81;
+  --yellow: #ffc93c;
+  --shadow: 0 18px 50px rgba(91, 59, 255, 0.18);
   --serif: Georgia, "Times New Roman", serif;
   --sans: "Avenir Next", Avenir, Helvetica, sans-serif;
 }
@@ -153,7 +153,7 @@ h1 em {
 .orbit {
   position: absolute;
   inset: 34px 22px 12px 22px;
-  border: 1px solid #f0d3bd;
+  border: 1px solid #d9d1ff;
   border-radius: 47% 53% 50% 48%;
   transform: rotate(-14deg);
 }
@@ -161,7 +161,7 @@ h1 em {
 .orbit::after {
   content: "";
   position: absolute;
-  border: 1px solid #f3ddc9;
+  border: 1px solid #e6e0ff;
   border-radius: 50%;
 }
 .orbit::before {
@@ -209,7 +209,7 @@ h1 em {
   letter-spacing: -0.08em;
 }
 .rate-label {
-  color: #ffdccf;
+  color: #d9d1ff;
   font-size: 0.85rem;
 }
 .card-footer {
@@ -222,7 +222,7 @@ h1 em {
   padding: 8px 12px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.14);
-  color: #ffe3d8;
+  color: #e6e0ff;
   font-size: 0.75rem;
 }
 .float-note {
@@ -236,7 +236,7 @@ h1 em {
   font-size: 0.8rem;
   font-weight: 800;
   transform: rotate(8deg);
-  box-shadow: 0 12px 30px rgba(92, 76, 28, 0.12);
+  box-shadow: 0 12px 30px rgba(91, 59, 255, 0.15);
 }
 .float-note.bottom {
   right: auto;
@@ -299,7 +299,7 @@ h1 em {
   font-size: 0.92rem;
 }
 .product-card.coral p {
-  color: #e3f5ee;
+  color: #ffd9e8;
 }
 .card-link {
   color: var(--green);
@@ -386,7 +386,7 @@ h1 em {
 .field label {
   display: block;
   margin-bottom: 8px;
-  color: #ffdccf;
+  color: #d9d1ff;
   font-size: 0.8rem;
   font-weight: 700;
 }
@@ -394,9 +394,9 @@ h1 em {
 .field select {
   width: 100%;
   padding: 14px 15px;
-  border: 1px solid #d85a3f;
+  border: 1px solid #7a5cff;
   border-radius: 10px;
-  background: #c2492f;
+  background: #4b30d9;
   color: var(--white);
   font: inherit;
   outline: none;
@@ -404,7 +404,7 @@ h1 em {
 .field input:focus,
 .field select:focus {
   border-color: var(--lime);
-  box-shadow: 0 0 0 3px rgba(255, 215, 122, 0.35);
+  box-shadow: 0 0 0 3px rgba(255, 225, 77, 0.35);
 }
 .converter-panel .button {
   width: 100%;
@@ -417,7 +417,7 @@ h1 em {
 .result {
   margin-top: 26px;
   padding-top: 22px;
-  border-top: 1px solid #d85a3f;
+  border-top: 1px solid #7a5cff;
 }
 .result-amount {
   margin-top: 5px;
@@ -427,7 +427,7 @@ h1 em {
 }
 .rate-caption {
   margin: 5px 0 0;
-  color: #ffdccf;
+  color: #d9d1ff;
   font-size: 0.8rem;
 }
 .rate-list {
