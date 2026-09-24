@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A simple AppLab currency converter." />
+    <title>Currency Converter | AppLab</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html"
+          ><span class="brand-mark">A</span><span>AppLab</span></a
+        >
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="../index.html#apps">All apps</a
+          ><a href="../support.html">Support</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <section class="page-hero">
+        <p class="eyebrow">AppLab / 01</p>
+        <h1>Currency, without the mental maths.</h1>
+        <p class="hero-copy">
+          A small converter for quick estimates. This demo uses illustrative
+          rates and runs entirely in your browser.
+        </p>
+      </section>
+      <section class="converter-layout">
+        <div class="converter-panel">
+          <h2>Convert an amount</h2>
+          <div class="field">
+            <label for="amount">Amount</label
+            ><input id="amount" type="number" value="100" min="0" step="0.01" />
+          </div>
+          <div class="field">
+            <label for="from">From</label
+            ><select id="from">
+              <option value="USD">US Dollar (USD)</option>
+              <option value="EUR">Euro (EUR)</option>
+              <option value="GBP">British Pound (GBP)</option>
+              <option value="JPY">Japanese Yen (JPY)</option>
+              <option value="CAD">Canadian Dollar (CAD)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="to">To</label
+            ><select id="to">
+              <option value="EUR">Euro (EUR)</option>
+              <option value="USD">US Dollar (USD)</option>
+              <option value="GBP">British Pound (GBP)</option>
+              <option value="JPY">Japanese Yen (JPY)</option>
+              <option value="CAD">Canadian Dollar (CAD)</option>
+            </select>
+          </div>
+          <button class="button" id="convert" type="button">
+            Convert amount
+          </button>
+          <div class="result" aria-live="polite">
+            <div class="rate-caption" id="summary">100 USD equals</div>
+            <div class="result-amount" id="result">92.00 EUR</div>
+            <div class="rate-caption">Illustrative rate · updated daily</div>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">Quick reference</p>
+          <h2>Keep moving.</h2>
+          <p class="section-intro">
+            Use the converter for planning and rough estimates. For purchases,
+            transfers, or invoices, check the rate your bank or provider will
+            apply.
+          </p>
+          <div class="rate-list">
+            <div class="rate-item">
+              <strong>USD</strong><span>US Dollar</span>
+            </div>
+            <div class="rate-item"><strong>EUR</strong><span>Euro</span></div>
+            <div class="rate-item">
+              <strong>GBP</strong><span>British Pound</span>
+            </div>
+            <div class="rate-item">
+              <strong>JPY</strong><span>Japanese Yen</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <span>© 2026 AppLab</span>
+        <nav class="footer-links">
+          <a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a
+          ><a href="../support.html">Support</a>
+        </nav>
+      </div>
+    </footer>
+    <script>
+      const rates = { USD: 1, EUR: 0.92, GBP: 0.79, JPY: 149.5, CAD: 1.36 };
+      const amount = document.getElementById("amount");
+      const from = document.getElementById("from");
+      const to = document.getElementById("to");
+      const result = document.getElementById("result");
+      const summary = document.getElementById("summary");
+      function convert() {
+        const value = Number(amount.value) || 0;
+        const converted = (value / rates[from.value]) * rates[to.value];
+        summary.textContent =
+          value.toLocaleString(undefined, { maximumFractionDigits: 2 }) +
+          " " +
+          from.value +
+          " equals";
+        result.textContent =
+          converted.toLocaleString(undefined, {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          }) +
+          " " +
+          to.value;
+      }
+      document.getElementById("convert").addEventListener("click", convert);
+      [amount, from, to].forEach((control) =>
+        control.addEventListener("change", convert),
+      );
+    </script>
+  </body>
+</html>
