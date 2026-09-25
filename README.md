@@ -20,4 +20,4 @@ Then open `http://localhost:8000`.
 4. Choose **Deploy from a branch**, select the default branch and the `/ (root)` folder, then save.
 5. GitHub will provide the public Pages URL after the deployment finishes.
 
-Before publishing, replace `hello@yourcompany.com` in `support.html` with the company support address and update the legal copy for the company that owns AppLab.
+Before publishing, update the legal copy for the company that owns AppLab.
