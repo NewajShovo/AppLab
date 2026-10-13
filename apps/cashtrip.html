@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="CashTrip: Travel Money Tracker by AppLab." />
+    <meta name="description" content="CashTrip: Travel Money Tracker by AppLab. A simple currency converter for travelers, with live rates for 160+ currencies." />
     <title>CashTrip: Travel Money Tracker | AppLab</title>
+    <link rel="icon" type="image/png" href="../assets/cashtrip-icon.png" />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
@@ -20,73 +21,51 @@
       </div>
     </header>
     <main class="container">
-      <section class="page-hero">
-        <p class="eyebrow">AppLab / 01</p>
-        <h1>Currency, without the mental maths.</h1>
-        <p class="hero-copy">
-          A small converter for quick estimates. This demo uses illustrative
-          rates and runs entirely in your browser.
-        </p>
-        <div class="actions">
-          <a class="button" href="https://apps.apple.com/app/cashtrip-travel-money-tracker/id6817420159">Download on the App Store</a>
-        </div>
-      </section>
-      <section class="converter-layout">
-        <div class="converter-panel">
-          <h2>Convert an amount</h2>
-          <div class="field">
-            <label for="amount">Amount</label
-            ><input id="amount" type="number" value="100" min="0" step="0.01" />
-          </div>
-          <div class="field">
-            <label for="from">From</label
-            ><select id="from">
-              <option value="USD">US Dollar (USD)</option>
-              <option value="EUR">Euro (EUR)</option>
-              <option value="GBP">British Pound (GBP)</option>
-              <option value="JPY">Japanese Yen (JPY)</option>
-              <option value="CAD">Canadian Dollar (CAD)</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="to">To</label
-            ><select id="to">
-              <option value="EUR">Euro (EUR)</option>
-              <option value="USD">US Dollar (USD)</option>
-              <option value="GBP">British Pound (GBP)</option>
-              <option value="JPY">Japanese Yen (JPY)</option>
-              <option value="CAD">Canadian Dollar (CAD)</option>
-            </select>
-          </div>
-          <button class="button" id="convert" type="button">
-            Convert amount
-          </button>
-          <div class="result" aria-live="polite">
-            <div class="rate-caption" id="summary">100 USD equals</div>
-            <div class="result-amount" id="result">92.00 EUR</div>
-            <div class="rate-caption">Illustrative rate · updated daily</div>
-          </div>
-        </div>
+      <section class="app-showcase">
         <div>
-          <p class="eyebrow">Quick reference</p>
-          <h2>Keep moving.</h2>
-          <p class="section-intro">
-            Use the converter for planning and rough estimates. For purchases,
-            transfers, or invoices, check the rate your bank or provider will
-            apply.
+          <img
+            class="app-icon"
+            src="../assets/cashtrip-icon.png"
+            alt="CashTrip app icon"
+            width="88"
+            height="88"
+          />
+          <p class="eyebrow">AppLab / 01 · iPhone</p>
+          <h1>Know what it costs, wherever you are.</h1>
+          <p class="hero-copy">
+            CashTrip is the simple currency converter built for travelers. Turn
+            foreign prices into your home currency in seconds, whether you're at
+            a market, in a taxi, or checking a hotel bill.
           </p>
-          <div class="rate-list">
+          <div class="actions">
+            <a class="button" href="https://apps.apple.com/app/cashtrip-travel-money-tracker/id6817420159">Download on the App Store</a>
+          </div>
+          <div class="feature-list">
             <div class="rate-item">
-              <strong>USD</strong><span>US Dollar</span>
+              <strong>160+ currencies</strong
+              ><span>Fast conversion between world currencies</span>
             </div>
-            <div class="rate-item"><strong>EUR</strong><span>Euro</span></div>
             <div class="rate-item">
-              <strong>GBP</strong><span>British Pound</span>
+              <strong>Live rates</strong
+              ><span>Up-to-date exchange rates, fetched as you go</span>
             </div>
             <div class="rate-item">
-              <strong>JPY</strong><span>Japanese Yen</span>
+              <strong>Favorites</strong
+              ><span>Keep the currencies you use close at hand</span>
+            </div>
+            <div class="rate-item">
+              <strong>No account</strong
+              ><span>Open the app and start converting</span>
             </div>
           </div>
+        </div>
+        <div class="phone-shot">
+          <img
+            src="../assets/cashtrip-screenshot.png"
+            alt="CashTrip converting 100 euros to Bangladeshi taka with a live rate"
+            width="600"
+            height="1299"
+          />
         </div>
       </section>
     </main>
@@ -100,33 +79,5 @@
         </nav>
       </div>
     </footer>
-    <script>
-      const rates = { USD: 1, EUR: 0.92, GBP: 0.79, JPY: 149.5, CAD: 1.36 };
-      const amount = document.getElementById("amount");
-      const from = document.getElementById("from");
-      const to = document.getElementById("to");
-      const result = document.getElementById("result");
-      const summary = document.getElementById("summary");
-      function convert() {
-        const value = Number(amount.value) || 0;
-        const converted = (value / rates[from.value]) * rates[to.value];
-        summary.textContent =
-          value.toLocaleString(undefined, { maximumFractionDigits: 2 }) +
-          " " +
-          from.value +
-          " equals";
-        result.textContent =
-          converted.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2,
-          }) +
-          " " +
-          to.value;
-      }
-      document.getElementById("convert").addEventListener("click", convert);
-      [amount, from, to].forEach((control) =>
-        control.addEventListener("change", convert),
-      );
-    </script>
   </body>
 </html>
