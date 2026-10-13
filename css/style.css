@@ -267,7 +267,7 @@ h1 em {
 }
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 18px;
 }
 .product-card {
@@ -289,8 +289,13 @@ h1 em {
   border-color: var(--coral);
   color: var(--white);
 }
+.product-card.violet {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--white);
+}
 .product-card h3 {
-  max-width: 220px;
+  max-width: 320px;
   font-size: 1.65rem;
 }
 .product-card p {
@@ -301,6 +306,9 @@ h1 em {
 .product-card.coral p {
   color: #ffd9e8;
 }
+.product-card.violet p {
+  color: #d9d1ff;
+}
 .card-link {
   color: var(--green);
   font-size: 0.85rem;
@@ -308,6 +316,9 @@ h1 em {
 }
 .product-card.coral .card-link {
   color: var(--white);
+}
+.product-card.violet .card-link {
+  color: var(--lime);
 }
 .manifesto {
   display: grid;
