@@ -555,3 +555,37 @@ h1 em {
     max-width: 280px;
   }
 }
+.video-section {
+  padding: 0 0 100px;
+}
+.video-section h2 {
+  max-width: 600px;
+  font-size: clamp(2.3rem, 5vw, 4.2rem);
+}
+.video-frame {
+  position: relative;
+  padding: 14px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, var(--green), #7b6bff 55%, var(--coral));
+  box-shadow: var(--shadow);
+}
+.video-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 848 / 480;
+  border-radius: 20px;
+  background: var(--green-dark);
+}
+@media (max-width: 760px) {
+  .video-section {
+    padding-bottom: 74px;
+  }
+  .video-frame {
+    padding: 8px;
+    border-radius: 22px;
+  }
+  .video-frame video {
+    border-radius: 15px;
+  }
+}
