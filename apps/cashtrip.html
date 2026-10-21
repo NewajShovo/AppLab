@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="../assets/cashtrip-icon.png" />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
-  <body>
+  <body class="app-cashtrip">
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="../index.html"
@@ -16,7 +16,8 @@
         >
         <nav class="nav-links" aria-label="Main navigation">
           <a href="../index.html#apps">All apps</a
-          ><a href="../support.html">Support</a>
+          ><a href="../support.html">Support</a
+          ><a class="button accent" href="https://apps.apple.com/app/cashtrip-travel-money-tracker/id6817420159">Download</a>
         </nav>
       </div>
     </header>
@@ -38,29 +39,13 @@
             a market, in a taxi, or checking a hotel bill.
           </p>
           <div class="actions">
-            <a class="button" href="https://apps.apple.com/app/cashtrip-travel-money-tracker/id6817420159">Download on the App Store</a>
-          </div>
-          <div class="feature-list">
-            <div class="rate-item">
-              <strong>160+ currencies</strong
-              ><span>Fast conversion between world currencies</span>
-            </div>
-            <div class="rate-item">
-              <strong>Live rates</strong
-              ><span>Up-to-date exchange rates, fetched as you go</span>
-            </div>
-            <div class="rate-item">
-              <strong>Favorites</strong
-              ><span>Keep the currencies you use close at hand</span>
-            </div>
-            <div class="rate-item">
-              <strong>No account</strong
-              ><span>Open the app and start converting</span>
-            </div>
+            <a class="button accent" href="https://apps.apple.com/app/cashtrip-travel-money-tracker/id6817420159">Download on the App Store</a
+            ><a class="button secondary" href="#video">Watch the video</a>
           </div>
         </div>
-        <div class="phone-shot">
+        <div class="spotlight">
           <img
+            class="spotlight-phone"
             src="../assets/cashtrip-screenshot.png"
             alt="CashTrip converting 100 euros to Bangladeshi taka with a live rate"
             width="600"
@@ -68,11 +53,39 @@
           />
         </div>
       </section>
-      <section class="video-section" id="video">
+
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="app-mark" aria-hidden="true"
+            ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" /></svg></span>
+          <strong>160+ currencies</strong
+          ><span>Fast conversion between world currencies</span>
+        </div>
+        <div class="feature-item">
+          <span class="app-mark" aria-hidden="true"
+            ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-8M14 8h6v6" /></svg></span>
+          <strong>Live rates</strong
+          ><span>Up-to-date exchange rates, fetched as you go</span>
+        </div>
+        <div class="feature-item">
+          <span class="app-mark" aria-hidden="true"
+            ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z" /></svg></span>
+          <strong>Favorites</strong
+          ><span>Keep the currencies you use close at hand</span>
+        </div>
+        <div class="feature-item">
+          <span class="app-mark" aria-hidden="true"
+            ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L5 13h6l-1 8 8-10h-6z" /></svg></span>
+          <strong>No account</strong
+          ><span>Open the app and start converting</span>
+        </div>
+      </div>
+
+      <section class="section" id="video">
         <div class="section-header">
           <div>
             <p class="eyebrow">See it in action</p>
-            <h2>Plan every trip on budget.</h2>
+            <h2>Plan every trip on <em>budget.</em></h2>
           </div>
           <p class="section-intro">
             Set a trip budget and CashTrip works out your daily allowance,
@@ -94,6 +107,14 @@
             <a href="../assets/cashtrip-promo.mp4">Download it instead</a>.
           </video>
         </div>
+      </section>
+
+      <section class="cta-band">
+        <div>
+          <h2>Ready for your next trip?</h2>
+          <p>CashTrip: Travel Money Tracker is on the App Store for iPhone.</p>
+        </div>
+        <a class="button" href="https://apps.apple.com/app/cashtrip-travel-money-tracker/id6817420159">Download on the App Store</a>
       </section>
     </main>
     <footer class="site-footer">
