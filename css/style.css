@@ -37,12 +37,19 @@
 }
 .app-hourglass {
   --accent: #e8912d;
+  --accent-deep: #a85a0c;
 }
 .app-renewa {
   --accent: #12a37a;
+  --accent-deep: #07664b;
 }
 .app-luna {
   --accent: #e0558a;
+  --accent-deep: #9c2357;
+}
+.app-qrscanner {
+  --accent: #2f7de1;
+  --accent-deep: #174a96;
 }
 
 * {
@@ -360,7 +367,7 @@ a.spotlight:hover .spotlight-arrow {
 /* App lineup */
 .app-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
 .app-tile {
@@ -595,6 +602,25 @@ img.app-mark {
   border-radius: 20px;
   box-shadow: var(--shadow-lg);
 }
+.app-showcase.is-soon {
+  grid-template-columns: minmax(0, 820px);
+  padding-bottom: 72px;
+}
+.app-icon.app-mark {
+  display: grid;
+  border-radius: 22px;
+}
+.app-icon.app-mark svg {
+  width: 40px;
+  height: 40px;
+}
+.brand-mark.app-brand {
+  background: var(--accent);
+}
+.brand-mark.app-brand svg {
+  width: 18px;
+  height: 18px;
+}
 .app-showcase .eyebrow {
   color: var(--accent);
 }
@@ -625,6 +651,12 @@ img.app-mark {
   width: 44px;
   height: 44px;
   border-radius: 12px;
+}
+.feature-item .app-mark {
+  color: #fff;
+}
+.feature-list + .cta-band {
+  margin-top: 96px;
 }
 .feature-item .app-mark svg {
   width: 22px;
@@ -662,7 +694,7 @@ img.app-mark {
   margin-bottom: 96px;
   padding: 48px;
   border-radius: 32px;
-  background: linear-gradient(135deg, var(--accent), #2d17b0);
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep, #2d17b0));
   color: #fff;
 }
 .cta-band h2 {
